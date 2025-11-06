@@ -1,0 +1,29 @@
+package com.fullstack.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+@Table(name = "CUSTOMER")
+@XmlRootElement(name = "CUSTOMER")
+public class Customer {
+
+    @Id
+    @GeneratedValue
+    private long custId;
+
+    private String custName;
+
+    private double custAccountBalance;
+
+
+}
